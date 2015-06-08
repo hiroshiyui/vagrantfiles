@@ -1,5 +1,9 @@
 Chef::Log.info("Installing Rails, this may take some time...")
 
+package "nodejs" do
+  action :install
+end
+
 execute "Install Rails" do
   user "vagrant"
   environment ({"HOME" => "/home/vagrant"})
