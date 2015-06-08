@@ -4,7 +4,11 @@ end
 
 execute "Install Oh-My-Zsh" do
   user "vagrant"
-  command "curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh"
+  environment ({"HOME" => "/home/vagrant"})
+  command <<-EOF
+    git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh && \
+    cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+  EOF
 end
 
 execute "Change default shell to Zsh" do
