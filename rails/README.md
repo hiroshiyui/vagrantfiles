@@ -4,7 +4,7 @@
 
 1. 安裝 VirtualBox
 2. 安裝 Vagrant
-3. 複製本專案到您的電腦上，例如 `cd $HOME && git clone https://gitlab.ecoworkinc.com/hiroshiyui/vagrantfiles`
+3. 複製本專案到您的電腦上，例如 `cd $HOME && git clone https://github.com/hiroshiyui/vagrantfiles`
 
 ## 建置
 
