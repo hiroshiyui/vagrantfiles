@@ -3,7 +3,7 @@
 execute "Import RVM GPG Key" do
   user "vagrant"
   environment ({"HOME" => "/home/vagrant"})
-  command "gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3"
+  command "curl -sSL https://rvm.io/mpapis.asc | gpg --import -"
 end
 
 Chef::Log.info("-- Installing RVM & Ruby, this may take some time, have a cup of tea or coffee? --")
